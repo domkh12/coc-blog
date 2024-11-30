@@ -1,10 +1,5 @@
 export default async function Home() {
 
-  interface Data{
-    id: number;
-    name: string;
-  }
-
   interface Product {
     id: number;
     title: string;
