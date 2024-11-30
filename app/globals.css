@@ -2,3 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities{
+    .card{
+        @apply bg-white shadow-md p-4 border rounded-3xl;
+    }
+    .nav{
+        @apply flex justify-between items-center p-4 bg-purple-600 text-white shadow-2xl fixed w-full;
+    }
+}
