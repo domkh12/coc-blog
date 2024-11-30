@@ -2,11 +2,35 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer utilities{
-    .card{
-        @apply bg-white shadow-md p-4 border rounded-3xl;
-    }
-    .nav{
-        @apply flex justify-between items-center p-4 bg-purple-600 text-white shadow-2xl fixed w-full;
-    }
+@layer utilities {
+  .card {
+    @apply bg-white shadow-md p-4 border rounded-3xl;
+  }
+  .nav {
+    @apply flex relative justify-between items-center p-4 bg-purple-600 text-white shadow-2xl w-full h-28 overflow-hidden;
+  }
+  .nav::before {
+    content: 'Logo';
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 400px;
+    height: 100%;
+    background-color: #f44336;
+  }
+
+  .nav::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 200px;
+    width: 400px;
+    height: 100%;
+    background-color: #9333ea;
+    transform: rotate(45deg);
+  }
 }
+
